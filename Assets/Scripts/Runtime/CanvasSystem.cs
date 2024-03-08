@@ -94,19 +94,19 @@ partial struct CanvasSetupSystem : ISystem
             buildingButtonInstance.Q<VisualElement>("Icon").style.backgroundImage = new StyleBackground(buildingButton);
             
             // Sets cursor to draw to the one corresponding with the button pressed
-            var cursorMode = i switch
+            var cursorToDraw = i switch
             {
-                3 => CursorSelection.CursorMode.Select,
-                4 => CursorSelection.CursorMode.Select,
-                5 => CursorSelection.CursorMode.DebugDraw,
-                _ => CursorSelection.CursorMode.Build
+                3 => CursorSelection.CursorToDraw.DestroyDefault,
+                4 => CursorSelection.CursorToDraw.SelectDefault,
+                5 => CursorSelection.CursorToDraw.DrawDefault,
+                _ => CursorSelection.CursorToDraw.LadderOutline + i
             };
 
             // On button click, set the cursor to draw to the one corresponding with the button pressed
             var cursorSelection = SystemAPI.QueryBuilder().WithAllRW<CursorSelection>().Build();
             buildingButtonInstance.Q<Button>().clickable.clicked += () =>
             {
-                cursorSelection.GetSingletonRW<CursorSelection>().ValueRW.Mode = cursorMode;
+                cursorSelection.GetSingletonRW<CursorSelection>().ValueRW.cursorToDraw = cursorToDraw;
             };
             buildingButtons.Add(buildingButtonInstance);
             i++;
