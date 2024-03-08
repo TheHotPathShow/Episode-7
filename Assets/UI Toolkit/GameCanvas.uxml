@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/main.uss?fileID=7433441132597879392&amp;guid=3dd53c4ff7ebd7746a030fc70f8bb6b6&amp;type=3#main" />
+    <ui:VisualElement style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; justify-content: flex-start; flex-direction: row-reverse; align-items: flex-end;">
+        <ui:VisualElement name="BuildingButtons" style="flex-grow: 1; flex-direction: row-reverse;" />
+    </ui:VisualElement>
+    <ui:VisualElement picking-mode="Ignore" name="CursorArea" focusable="false" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0;">
+        <ui:VisualElement name="CursorMain" style="width: 100px; height: 100px; left: 900px; top: 700px; position: absolute; background-image: url(&apos;project://database/Assets/Tiles/slimes-are-comming.png?fileID=-1287879117&amp;guid=b3ded538870f6af44ab9303b657de248&amp;type=3#slimes-are-comming_131&apos;);" />
+        <ui:VisualElement name="CursorSecondary" style="width: 100px; height: 100px; left: 900px; top: 700px; position: absolute; background-image: url(&apos;project://database/Assets/Tiles/slimes-are-comming.png?fileID=-1044768890&amp;guid=b3ded538870f6af44ab9303b657de248&amp;type=3#slimes-are-comming_129&apos;);" />
+    </ui:VisualElement>
+</ui:UXML>
